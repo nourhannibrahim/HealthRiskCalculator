@@ -39,7 +39,7 @@ document.getElementById("risk-form").addEventListener("submit", function(event) 
     };
 
     // Send data to backend
-    fetch('http://localhost:3000/calculate-risk', {
+    fetch('http://healthriskcalculatorweb-bcangtchd4age4gg.uaenorth-01.azurewebsites.net/calculate-risk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
