@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Risk Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Health Risk Calculator</h1>
+        <p class="subtitle">Determine your insurance risk based on key health factors</p>
+    </header>
+
+    <form id="risk-form">
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" min="0" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" name="height" min="0" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bloodPressure">Blood Pressure (mmHg):</label>
+            <input type="number" id="bloodPressure" name="bloodPressure" required>
+        </div>
+
+        <div class="form-group">
+            <label for="familyHistory">Family History:</label>
+            <div class="checkbox-group"> 
+                 <input type="checkbox" id="diabetes" name="diabetes">
+                <label>
+                    Diabetes
+                   
+                </label>
+               <input type="checkbox" id="cancer" name="cancer">
+                <label>
+                    Cancer
+                    
+                </label>
+                 <input type="checkbox" id="alzheimers" name="alzheimers">
+                <label>
+                    Alzheimer's
+                   
+                </label>
+            </div>
+        </div>
+
+        <button type="submit">Calculate Risk</button>
+    </form>
+
+    <div id="result" class="hidden">
+        <h2>Risk Summary</h2>
+        <p id="risk-score"></p>
+        <p id="risk-category"></p>
+        <p id="bmi-result"></p>
+        <p id="bp-result"></p>
+        <h3>Risk Calculation Breakdown</h3>
+        <div id="risk-breakdown"></div> 
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
